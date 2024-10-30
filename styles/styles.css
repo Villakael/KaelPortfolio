@@ -155,7 +155,7 @@ span{
 
 .icons a:hover{
   color: black;
-  transform: scale(1.3) translateY(-5px))
+  transform: scale(1.3) translateY(-5px);
 }
 
 .btn{
