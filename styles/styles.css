@@ -28,17 +28,31 @@ body{
   color: azure;
 }
 
-header{
+header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1rem 9%;
+  width: 100%;                   /* Set header width to 100% */
+  padding: 1rem 5%;              /* Adjust padding as needed */
   background-color: #333;
   filter: drop-shadow();
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between logo and nav */
   align-items: center;
   z-index: 100;
+}
+
+nav {
+  display: flex;                 /* Use flexbox for navigation items */
+  gap: 4rem;                    /* Space between nav items */
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
 }
 
 .logo{
@@ -53,41 +67,10 @@ header{
   transform: scale(1.1);
 }
 
-nav a{
-  font-size: 1.8rem;
-  color: white;
-  margin-left: 4rem;
-  font-weight: 500;
-  transition: 0.3 ease;
-  border-bottom:3px solid transparent;
-}
-
-
 
 @media(max-width:995px){
   nav{
-    position: absolute;
     display: none;
-    top: 100%;
-    right: 0;
-    width: 40%;
-    border-left:3px solid cadetblue;
-    border-bottom: 3px solid cadetblue;
-    border-bottom-left-radius: 4rem;
-    padding: 1rem solid;
-    background-color: #333;
-    border-top: 0.1rem solid #333;
-  }
-
-  nav.active{
-    display: block;
-
-  }
-
-  nav a{
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
   }
 
   nav a:hover,
@@ -95,6 +78,17 @@ nav a{
     padding: 1rem;
     border-radius: 0,5rem;
     border-bottom: o.5rem solid cadetblue;
+  }
+
+  .home-img img{
+    border-radius: 45%;
+    display: none;
+    position: relative;
+    width: 32vw;
+    box-shadow: 0 0 25px solid cadetblue;
+    cursor: pointer;
+    transition: 0.2s linear;
+    background-color: white;
   }
 }
 
@@ -137,6 +131,7 @@ span{
   box-shadow: 0 0 25px solid cadetblue;
   cursor: pointer;
   transition: 0.2s linear;
+  background-color: white;
 }
 
 .home-img img:hover{
@@ -164,7 +159,7 @@ span{
 }
 
 .btn{
-  margin-top: 1rem;
+  margin-top: 3rem;
   display: inline-block;
   padding: 1rem 2.8rem;
   background-color: #333;
@@ -207,31 +202,32 @@ span{
   top: 2rem;
 }
 
+.about-me-section {
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
 .about-me-pic {
   align-self: center;
   display: flex;
   height: 400px;
   width: 400px;
   margin: auto 0;
-  align-self: left;
-  padding-right: 5rem;
 }
 
 .about-pic {
   border-radius: 200px;
 }
 
-.about-me-section {
-  display: flex;
-  align-items: center;
-  padding-left: 8vw;
-  padding-right: 8vw;
-}
 
 .about-text {
   font-size: 1.2rem;
   text-align: left;
   line-height: 135%;
+  margin-right: 1rem;
 }
 
 #education {
@@ -239,20 +235,35 @@ span{
   flex-direction: column;
   padding-left: 5rem;
   padding-right: 5rem;
-  gap: 1rem;
-  align-content: center;
-  justify-content: center;
+}
+
+.school-cards-section {
+  display: flex;                   
+  flex-wrap: wrap;              
+  justify-content: space-between;  
+  gap: 2rem;                      
 }
 
 .school-cards {
-  border-color: cadetblue;
   border-radius: 0.75rem;
-  border-style: solid;
   border-width: 0.3rem;
-
   display: flex;
-  flex-direction: row;
+  flex-direction: column;        
   height: fit-content;
+  width: calc(45%);               
+}
+
+@media screen and (max-width: 768px) {
+  .school-cards-section {
+    flex-direction: column; 
+    padding-left: 2rem;   
+    padding-right: 2rem; 
+  }
+
+  .school-cards {
+    width: 100%; 
+    margin-bottom: 2rem; 
+  }
 }
 
 .school-cards img {
@@ -311,7 +322,6 @@ span{
   position: relative;
   border-radius: 10px;
 }
-
 .card-text {
   padding: 1rem;
   padding-top: 0.25rem;
@@ -337,7 +347,6 @@ span{
   display: flex;
   justify-content: center;
 }
-
 #experience {
   display: flex;
   flex-direction: column;
@@ -367,6 +376,26 @@ span{
   font-size: 0.95rem;
 }
 
+#Skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the cards horizontally */
+  padding: 2rem;
+}
+
+.skills-card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center cards */
+  gap: 2rem; /* Space between cards */
+  width: 100%; /* Optional: restrict width */
+}
+
+
+
+.skills-card {
+  background-color: black;
+}
 
 
 #contact {
@@ -463,46 +492,6 @@ span{
     font-size: 1.3rem;
   }
 
-  #education {
-    display: block;
-    padding: 10px;
-  }
-
-  .school-cards {
-    width: 90%;
-    margin-top: 3rem;
-    height: fit-content;
-    flex-wrap: wrap;
-  }
-  .School-Logo-Con {
-    flex: 1 0 30%;
-    height: 140px;
-  }
-
-  .School-Logo-Con img {
-    height: 140px;
-    width: 140px;
-    padding: 0;
-  }
-  .gpa-con {
-    flex: 1 0 65%;
-  }
-
-  .gpa {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .school-name {
-    margin-bottom: 5px;
-  }
-
-  .job-card {
-    height: fit-content;
-  }
-
-  .info-school {
-    margin: 0;
-  }
+  
 
 }
