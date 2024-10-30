@@ -32,19 +32,19 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;                   /* Set header width to 100% */
-  padding: 1rem 5%;              /* Adjust padding as needed */
+  width: 100%;                  
+  padding: 1rem 5%;            
   background-color: #333;
   filter: drop-shadow();
   display: flex;
-  justify-content: space-between; /* Space between logo and nav */
+  justify-content: space-between; 
   align-items: center;
   z-index: 100;
 }
 
 nav {
-  display: flex;                 /* Use flexbox for navigation items */
-  gap: 4rem;                    /* Space between nav items */
+  display: flex;                 
+  gap: 4rem;                    
 }
 
 nav a {
@@ -379,16 +379,16 @@ span{
 #Skills {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the cards horizontally */
+  align-items: center; 
   padding: 2rem;
 }
 
 .skills-card-container {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap */
-  justify-content: center; /* Center cards */
-  gap: 2rem; /* Space between cards */
-  width: 100%; /* Optional: restrict width */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2rem; 
+  width: 100%; 
 }
 
 
