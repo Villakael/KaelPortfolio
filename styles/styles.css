@@ -463,4 +463,46 @@ span{
     font-size: 1.3rem;
   }
 
+  #education {
+    display: block;
+    padding: 10px;
+  }
+
+  .school-cards {
+    width: 90%;
+    margin-top: 3rem;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .School-Logo-Con {
+    flex: 1 0 30%;
+    height: 140px;
+  }
+
+  .School-Logo-Con img {
+    height: 140px;
+    width: 140px;
+    padding: 0;
+  }
+  .gpa-con {
+    flex: 1 0 65%;
+  }
+
+  .gpa {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .school-name {
+    margin-bottom: 5px;
+  }
+
+  .job-card {
+    height: fit-content;
+  }
+
+  .info-school {
+    margin: 0;
+  }
+
 }
